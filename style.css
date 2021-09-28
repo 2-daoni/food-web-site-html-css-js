@@ -1,11 +1,67 @@
 :root {
   --white-color: #fff;
+  --pink-color: #ff0158;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header.sticky {
+  background: var(--white-color);
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header.sticky .logo,
+header.sticky .nav li a {
+  color: black;
+}
+
+header .logo {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: var(--pink-color);
+}
+
+header .nav {
+  position: relative;
+  display: flex;
+}
+
+header .nav li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .nav li a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: 400;
+}
+
+header .nav li a:hover {
+  color: var(--pink-color);
 }
 
 .banner {
@@ -38,7 +94,7 @@
 .btn {
   font-size: 1rem;
   color: var(--white-color);
-  background: #ff0157;
+  background: var(--pink-color);
   display: inline-block;
   padding: 10px 30px;
   margin-top: 20px;
